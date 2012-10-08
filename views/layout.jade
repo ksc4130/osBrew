@@ -6,7 +6,7 @@ html
 		link(href="http://fonts.googleapis.com/css?family=Petit+Formal+Script", rel="stylesheet", type="text/css")
 		link(href="http://fonts.googleapis.com/css?family=Allura", rel="stylesheet", type="text/css")
 		link(href='http://fonts.googleapis.com/css?family=Raleway+Dots', rel='stylesheet', type='text/css')
-		link(rel='stylesheet', href='/styles/style.css')
+		link(rel='stylesheet', href='/styles/style2.css')
 		link(rel='stylesheet', href='/styles/jquery-ui-1.8.22.custom.css')
 		block head
 	body
@@ -24,8 +24,9 @@ html
 						a(href="/gallery", id="gallery") Gallery
 					li
 						a(href="/contact", id="contact") Contact Us
-		div(id="content_wrapper")
-			block content
+		div(id="content_filler")
+			div(id="content_wrapper")
+				block content
 	script(src="/scripts/libs/jquery-1.7.2.min.js")
 	script(src="/scripts/libs/jquery-ui-1.8.22.custom.min.js")
 	script(src="/scripts/libs/slides.min.jquery.js")

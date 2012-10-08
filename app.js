@@ -19,7 +19,7 @@ var ObjectId = mongo.ObjectId;
 var app = express();
 
 app.configure(function(){
-  app.set('port', process.env.PORT || 80);
+  app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.favicon());
@@ -38,6 +38,7 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.home.index);
+app.get('/index2', routes.home.index2);
 app.get('/gallery', routes.home.gallery);
 app.get('/contact', routes.home.contact);
 
