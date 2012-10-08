@@ -147,44 +147,95 @@ tt {
   display: block;
 }
 .global_width {
-  width: 960px;
+  width: 1000px;
   margin-left: auto;
   margin-right: auto;
+  min-width: 1000px;
 }
 .font {
-  font: 1em "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Raleway Dots', cursive;
+  font-size: 1.5em ;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
 }
 .h1 {
-  font-size: 2.75em;
+  font-family: 'Petit Formal Script', cursive;
+  font-size: 4.75em;
+  margin: -0.2em;
+  text-shadow: 0 0 14px #000000;
+  /* horizontal-offset vertical-offset 'blur' colour */
+
+  -moz-text-shadow: 0 0 14px #000000;
+  -webkit-text-shadow: 0 0 14px #000000;
+  -o-text-shadow: 0 0 14px #000000;
+  -ms-text-shadow: 0 0 14px #000000;
 }
 .h2 {
-  font-size: 2.5em;
+  font-family: 'Petit Formal Script', cursive;
+  font-size: 4.5em;
+  margin: -0.2em;
+  text-shadow: 0 0 14px #000000;
+  /* horizontal-offset vertical-offset 'blur' colour */
+
+  -moz-text-shadow: 0 0 14px #000000;
+  -webkit-text-shadow: 0 0 14px #000000;
+  -o-text-shadow: 0 0 14px #000000;
+  -ms-text-shadow: 0 0 14px #000000;
 }
 .h3 {
-  font-size: 2.25em;
+  font-family: 'Petit Formal Script', cursive;
+  font-size: 4.25em;
+  margin: -0.2em;
+  text-shadow: 0 0 14px #000000;
+  /* horizontal-offset vertical-offset 'blur' colour */
+
+  -moz-text-shadow: 0 0 14px #000000;
+  -webkit-text-shadow: 0 0 14px #000000;
+  -o-text-shadow: 0 0 14px #000000;
+  -ms-text-shadow: 0 0 14px #000000;
 }
 .h4 {
-  font-size: 2em;
+  font-family: 'Petit Formal Script', cursive;
+  font-size: 4em;
+  margin: -0.2em;
+  text-shadow: 0 0 14px #000000;
+  /* horizontal-offset vertical-offset 'blur' colour */
+
+  -moz-text-shadow: 0 0 14px #000000;
+  -webkit-text-shadow: 0 0 14px #000000;
+  -o-text-shadow: 0 0 14px #000000;
+  -ms-text-shadow: 0 0 14px #000000;
 }
 .h5 {
-  font-size: 1.75em;
+  font-family: 'Petit Formal Script', cursive;
+  font-size: 2.75em;
+  margin: -0.2em;
+  text-shadow: 0 0 14px #000000;
+  /* horizontal-offset vertical-offset 'blur' colour */
+
+  -moz-text-shadow: 0 0 14px #000000;
+  -webkit-text-shadow: 0 0 14px #000000;
+  -o-text-shadow: 0 0 14px #000000;
+  -ms-text-shadow: 0 0 14px #000000;
 }
 .h6 {
-  font-size: 1.5em;
+  font-family: 'Petit Formal Script', cursive;
+  font-size: 2.5em;
+  margin: -0.2em;
+  text-shadow: 0 0 14px #000000;
+  /* horizontal-offset vertical-offset 'blur' colour */
+
+  -moz-text-shadow: 0 0 14px #000000;
+  -webkit-text-shadow: 0 0 14px #000000;
+  -o-text-shadow: 0 0 14px #000000;
+  -ms-text-shadow: 0 0 14px #000000;
+  color: #fff;
 }
 .hidden {
   display: none;
 }
-.slides_container {
-  width: 570px;
-  height: 270px;
-}
-.slides_container div {
-  width: 570px;
-  height: 270px;
-  display: block;
-}
 html {
+  background-color: #333;
   background-image: url('/images/tex2res4.png');
   background-repeat: repeat;
 }
@@ -193,9 +244,9 @@ html body {
 }
 html body header {
   width: 1000px;
-  min-width: 1000px;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
+  min-width: 1000px;
 }
 html body header nav {
   z-index: 1;
@@ -217,10 +268,7 @@ html body header nav ul li a {
   -ms-text-shadow: 0 0 14px #000000;
   text-decoration: none;
   display: block;
-  padding-right: 15px;
-  padding-left: 15px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 5px 15px;
   color: rgba(255, 255, 255, 0.5);
   font-size: 20px;
   -webkit-transition: color .2s;
@@ -232,6 +280,18 @@ html body header nav ul li a:hover {
 }
 html body header nav ul li a.active {
   color: rgba(255, 255, 255, 0.9);
+}
+html body div#content_wrapper {
+  margin-top: 40px;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 1000px;
+  font-family: 'Raleway Dots', cursive;
+  font-size: 1.5em ;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 40px;
 }
 div#logo_wrapper {
   height: 200px;
@@ -305,35 +365,4 @@ div#logo_wrapper div#logo div#c {
   width: 50px;
   height: 2px;
   background-color: rgba(255, 255, 255, 0.5);
-}
-#content_wrapper {
-  width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.teams_wrapper {
-  width: 650px;
-  float: right;
-  display: inline-block;
-  display: block;
-}
-.teams_wrapper div {
-  width: 300px;
-}
-.teams_wrapper .team {
-  height: 300px;
-  border: 1px solid green;
-  position: relative;
-  display: inline-block;
-}
-.teams_wrapper .player {
-  border: 1px solid black;
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: 100px;
-  left: 100px;
-}
-.teams_wrapper .player input {
-  width: 75px;
 }

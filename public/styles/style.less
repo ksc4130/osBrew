@@ -20,9 +20,10 @@ body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-s
 //end clearfix
 
 .global_width{
-    width: 960px;
+    width: 1000px;
     margin-left: auto;
     margin-right: auto;
+    min-width: 1000px;
 }
 
 .rotate(@deg: 10deg) {
@@ -42,26 +43,49 @@ body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-s
 }
 
 .font {
-	font: 1em "Lucida Grande", Helvetica, Arial, sans-serif;
+	font-family: 'Raleway Dots', cursive;
+	font-size: 1.5em ;//"Whitney SSm A", "Whitney SSm B", Helvetica, Arial, sans-serif;
+	line-height: 1.6;
+	//font-weight: bold;
+	color: @FontColorHover;
 }
 
 .h1 {
-	font-size: 2.75em;
+	font-family: 'Petit Formal Script', cursive;
+	font-size: 4.75em;
+	margin: -.2em;
+	.text-shadow;
 }
 .h2 {
-	font-size: 2.5em;
+	font-family: 'Petit Formal Script', cursive;
+	font-size: 4.5em;
+	margin: -.2em;
+	.text-shadow;
 }
 .h3 {
-	font-size: 2.25em;
+	font-family: 'Petit Formal Script', cursive;
+	font-size: 4.25em;
+	margin: -.2em;
+	.text-shadow;
 }
 .h4 {
-	font-size: 2em;
+	font-family: 'Petit Formal Script', cursive;
+	font-size: 4em;
+	margin: -.2em;
+	.text-shadow;
 }
 .h5 {
-	font-size: 1.75em;
+	font-family: 'Petit Formal Script', cursive;
+	font-size: 2.75em;
+	margin: -.2em;
+	.text-shadow;
 }
 .h6 {
-	font-size: 1.5em;
+	font-family: 'Petit Formal Script', cursive;
+	font-size: 2.5em;
+	margin: -.2em;
+	.text-shadow;
+	color: #fff;//rgba(254, 245, 202, .7);
 }
 
 .hidden{
@@ -75,27 +99,14 @@ body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-s
 @FontColorActive: rgba(255, 255, 255, .9);
 
 
-.slides_container {
-    width: 570px;
-    height: 270px;
-}
-
-.slides_container div {
-    width: 570px;
-    height: 270px;
-    display: block;
-}
-
 html {
+	background-color: #333;
 	background-image: url('/images/tex2res4.png');
 	background-repeat: repeat;
 	body {
 		min-width: 1100px;
 		header {
-			width: 1000px;
-			min-width: 1000px;
-			margin-right: auto;
-			margin-left: auto;
+			.global_width;
 			nav {
 				z-index: 1;
 				border-bottom: 1px solid @BorderColor;
@@ -109,10 +120,7 @@ html {
 							.text-shadow;
 							text-decoration: none;
 							display: block;
-							padding-right: 15px;
-							padding-left: 15px;
-							padding-top: 5px;
-							padding-bottom: 5px;
+							padding: 5px 15px;
 							color: @FontColorBlur;
 							font-size: 20px;
 							-webkit-transition: color .2s;
@@ -128,6 +136,12 @@ html {
 					}
 				}
 			}
+		}//end header
+		div#content_wrapper {
+			margin-top: 40px;
+			.global_width;
+			.font;
+			margin-bottom: 40px;
 		}
 	}
 }
@@ -196,36 +210,6 @@ div#logo_wrapper {
 			height: 2px;
 			//background-color: #89472a;
 			background-color: rgba(255, 255, 255, .5);
-		}
-	}
-}
-
-#content_wrapper {
-	.global_width;
-}
-
-.teams_wrapper {
-	width: 650px;
-	float: right;
-	.clearfix;
-	div {
-		width: 300px;
-	}
-	.team {
-		height: 300px;
-		border: 1px solid green;
-		position: relative;
-		display: inline-block;
-	}
-	.player {
-		border: 1px solid black; 
-		width: 100px; 
-		height: 100px; 
-		position: absolute; 
-		top: 100px; 
-		left: 100px;
-		input {
-			width: 75px;
 		}
 	}
 }

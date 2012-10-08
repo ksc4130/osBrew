@@ -4,29 +4,6 @@
   margin: 0 auto;
   position: relative;
   z-index: 0;
-  /*
-		Slideshow
-	*/
-
-  /*
-		Slides container
-		Important:
-		Set the width of your slides container
-		Set to display none, prevents content flash
-	*/
-
-  /*
-		Each slide
-		Important:
-		Set the width of your slides
-		If height not specified height will be set by the slide content
-		Set to display block
-	*/
-
-  /*
-		Next/prev buttons
-	*/
-
 }
 #slides_container #example {
   width: 600px;
@@ -47,14 +24,14 @@
   left: 4px;
   z-index: 100;
 }
-#slides_container .slides_container {
+#slides_container #slides .slides_container {
   width: 570px;
   height: 270px;
   overflow: hidden;
   position: relative;
   display: none;
 }
-#slides_container .slides_container a {
+#slides_container #slides .slides_container a {
   width: 570px;
   height: 270px;
   display: block;
