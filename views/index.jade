@@ -1,45 +1,16 @@
 extends layout
 
 block head
-	link(rel='stylesheet', href='/styles/index.css')
+
 block content
-	//h1.h1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home
-	p 
-		h6.h6 &nbsp;&nbsp;&nbsp;&nbsp;One
-		| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed orci ac elit volutpat volutpat ac in odio. Nullam lectus dolor, blandit auctor euismod eu, placerat ac velit. Donec condimentum, urna a euismod posuere, odio neque elementum orci, sed ultricies enim enim ac nibh. Sed vulputate erat dui. Nam convallis mauris sed nulla fermentum vel venenatis massa malesuada. Vestibulum vestibulum ornare ante vel iaculis. Etiam molestie volutpat vestibulum. Aliquam at luctus magna. Sed dapibus adipiscing risus, vel tincidunt neque luctus eu. Ut non erat ut arcu cursus dignissim. Duis eleifend nibh a erat molestie aliquet. Ut dignissim consequat bibendum.
-		| Sed semper magna quis dui congue adipiscing. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In mollis, diam vel rhoncus porta, augue nunc tincidunt justo, a tristique ipsum justo a turpis. Cras faucibus laoreet erat et mollis. Aliquam eget mauris metus. Nunc semper lorem sed nibh consectetur aliquam. Aenean quis risus hendrerit dolor suscipit accumsan id vel purus. In hac habitasse platea dictumst. Nam sollicitudin consectetur laoreet. Quisque iaculis ultricies arcu, interdum luctus justo dapibus sed. Suspendisse potenti. Morbi a augue quis turpis viverra pretium. Proin dictum ullamcorper lacus nec lobortis.
-		br
-		br
-		#slides
-			div(class="slides_container")
-				div
-					img(src="http://slidesjs.com/examples/standard/img/slide-1.jpg", class="slide", alt="Slide 1")
-				div
-					img(src="http://slidesjs.com/examples/standard/img/slide-2.jpg", class="slide", alt="Slide 2")
-				div
-					img(src="http://slidesjs.com/examples/standard/img/slide-3.jpg", class="slide", alt="Slide 3")
-				div
-					img(src="http://slidesjs.com/examples/standard/img/slide-4.jpg", class="slide", alt="Slide 4")
-				div
-					img(src="http://slidesjs.com/examples/standard/img/slide-5.jpg", class="slide", alt="Slide 5")
-				div
-					img(src="http://slidesjs.com/examples/standard/img/slide-6.jpg", class="slide", alt="Slide 6")
-				div
-					img(src="http://slidesjs.com/examples/standard/img/slide-7.jpg", class="slide", alt="Slide 7")
-		br
-		h6.h6 &nbsp;&nbsp;&nbsp;&nbsp;Two
-		| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sed sed luctus enim. Integer condimentum sem nec ligula semper sed sollicitudin elit molestie. Duis ut dui tristique urna scelerisque feugiat at vestibulum sem. Morbi id quam nunc, at egestas leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum at tempor purus. Vestibulum ac mauris sem. Nam interdum mauris vitae magna pharetra vitae porttitor orci accumsan.
-		| Nullam mollis lacinia magna, et cursus nisl mollis sed. Sed urna nisi, suscipit condimentum tempus at, euismod id nisl. Mauris et lectus massa. Maecenas a quam eros. Curabitur eleifend commodo imperdiet. Suspendisse vel lorem tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi tincidunt orci a est sollicitudin vel sodales nunc auctor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras sit amet arcu purus, et mollis odio. Morbi at elit fermentum urna semper scelerisque sed egestas urna. Aenean varius nisl non justo malesuada rhoncus. Mauris interdum consectetur est, ut mollis eros suscipit nec. Proin lacinia nunc at lectus feugiat dignissim tristique felis fermentum. Curabitur et pellentesque mauris.
-		| Nullam bibendum ornare felis sit amet <a href="http://google.com">sagittis</a>. Vivamus turpis odio, feugiat a vestibulum ac, pulvinar vitae lorem. Suspendisse egestas, tortor sit amet feugiat ultrices, dolor lorem molestie risus, vel varius lectus erat sit amet libero. In hac habitasse platea dictumst. Fusce faucibus, est in auctor commodo, odio turpis adipiscing nisi, eu luctus sapien purus id purus. Nullam nibh turpis, tristique vel convallis et, consequat eget leo. Praesent lacinia aliquam vulputate. Curabitur nibh augue, convallis mattis mattis eget, pulvinar eu metus. Aenean sed mi elit. Nam arcu augue, pellentesque quis porttitor ut, accumsan sed risus. Nulla faucibus neque ac lacus vestibulum nec gravida velit pellentesque. Proin ac nisi et mauris varius fermentum. Aliquam erat volutpat. Quisque et nisi at libero aliquam congue. Nullam in mi id velit vehicula consequat id quis libero. Vivamus mi lectus, iaculis eu congue vitae, pretium sed lacus.
+	#timeline(data-bind="foreach: posts")
+		div(style="padding: 10px 0; border-top: 1px solid rgba(147, 145, 148, .8); border-bottom: 1px solid rgba(147, 145, 148, .8);")
+			div(class="clearfix")
+				div(style="float: left; width: 120px; margin-left: 20px; margin-top: 20px;")
+					p(data-bind="text: date[0]", style="font-size: .75em;")
+					p(data-bind="text: date[1] + ', ' + date[2]", style="font-size: .65em;")
+				div(style="border-left: 1px solid rgba(147, 145, 148, .8);float: right; width: 830px;")
+					h6.h6(data-bind="text: '&nbsp;&nbsp;&nbsp;&nbsp;' + title")
+					p(data-bind="text: '&nbsp;&nbsp;&nbsp;&nbsp;' + content")
 block scripts
-	script
-		$(function(){
-			$('#slides').slides({
-				preload: true,
-				preloadImage: '/images/loading.gif',
-				play: 5000,
-				pause: 2500,
-				hoverPause: true,
-				generatePagination: false
-			});
-		});
+	script(src="/scripts/viewmodels/index.js")
