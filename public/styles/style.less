@@ -41,51 +41,29 @@ body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-s
 	-o-text-shadow: 0 0 @size @color;
 	-ms-text-shadow: 0 0 @size @color;
 }
-
-.font {
-	font-family: 'Raleway Dots', cursive;
-	font-size: 1.5em ;//"Whitney SSm A", "Whitney SSm B", Helvetica, Arial, sans-serif;
-	line-height: 1.6;
-	//font-weight: bold;
-	color: @FontColorHover;
-}
-
-.h1 {
+.h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family: 'Petit Formal Script', cursive;
-	font-size: 4.75em;
 	margin: -.2em;
 	.text-shadow;
+	color: rgba(5, 5, 5, .7);
+}
+.h1 {
+	font-size: 4.75em;
 }
 .h2 {
-	font-family: 'Petit Formal Script', cursive;
 	font-size: 4.5em;
-	margin: -.2em;
-	.text-shadow;
 }
 .h3 {
-	font-family: 'Petit Formal Script', cursive;
 	font-size: 4.25em;
-	margin: -.2em;
-	.text-shadow;
 }
 .h4 {
-	font-family: 'Petit Formal Script', cursive;
 	font-size: 4em;
-	margin: -.2em;
-	.text-shadow;
 }
 .h5 {
-	font-family: 'Petit Formal Script', cursive;
 	font-size: 2.75em;
-	margin: -.2em;
-	.text-shadow;
 }
 .h6 {
-	font-family: 'Petit Formal Script', cursive;
 	font-size: 2.5em;
-	margin: -.2em;
-	.text-shadow;
-	color: #fff;//rgba(254, 245, 202, .7);
 }
 
 .hidden{
@@ -98,18 +76,27 @@ body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-s
 @FontColorHover: rgba(255, 255, 255, .8);
 @FontColorActive: rgba(255, 255, 255, .9);
 
+.font {
+	font-family: cursive;
+	font-size: 1.5em;
+	line-height: 1.6;
+	color: rgba(5, 5, 5, .7);
+}
+
 
 html {
 	background-color: #333;
 	background-image: url('/images/tex2res4.png');
 	background-repeat: repeat;
+	height: 100%;
 	body {
 		min-width: 1100px;
+		height: 100%;
 		header {
 			.global_width;
 			nav {
+				margin-top: 15px;
 				z-index: 1;
-				border-bottom: 1px solid @BorderColor;
 				ul {
 					li {
 						&:first-child {
@@ -137,12 +124,30 @@ html {
 				}
 			}
 		}//end header
-		div#content_wrapper {
-			margin-top: 40px;
-			.global_width;
-			.font;
-			margin-bottom: 40px;
+		div#content_filler {
+			background-color: #ddd;
+			background-image: url('/images/fabric_plaid.png');
+			background-repeat: repeat;
+			min-width: 100%;
+			min-height: 100%;
+			border-top: 2px solid rgba(241, 108, 50, .5);
+			margin-top: 20px;
+			div#content_wrapper {
+				.global_width;
+				.font;
+				margin-bottom: 40px;
+				padding: 30px;
+				min-height: 100%;
+				a {
+					text-decoration: none;
+					color: rgba(241, 108, 50, 1);
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
 		}
+		
 	}
 }
 

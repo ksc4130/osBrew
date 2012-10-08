@@ -38,7 +38,6 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.home.index);
-app.get('/index2', routes.home.index2);
 app.get('/gallery', routes.home.gallery);
 app.get('/contact', routes.home.contact);
 
