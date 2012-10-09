@@ -1,16 +1,13 @@
 extends layout
 
 block head
-
+	link(href="/styles/index.css", rel="stylesheet")
 block content
 	#timeline(data-bind="foreach: posts")
-		div(style="padding: 10px 0; border-top: 1px solid rgba(147, 145, 148, .8); border-bottom: 1px solid rgba(147, 145, 148, .8);")
-			div(class="clearfix")
-				div(style="float: left; width: 120px; margin-left: 20px; margin-top: 20px;")
-					p(data-bind="text: date[0]", style="font-size: .75em;")
-					p(data-bind="text: date[1] + ', ' + date[2]", style="font-size: .65em;")
-				div(style="border-left: 1px solid rgba(147, 145, 148, .8);float: right; width: 830px;")
-					h6.h6(data-bind="text: '&nbsp;&nbsp;&nbsp;&nbsp;' + title")
-					p(data-bind="text: '&nbsp;&nbsp;&nbsp;&nbsp;' + content")
+		div.post
+			span.title(data-bind="text: title")
+			span.meta(data-bind="text: date")
+			div.content_wrapper
+				p.content(data-bind="text: content")
 block scripts
 	script(src="/scripts/viewmodels/index.js")

@@ -1,0 +1,25 @@
+#timeline .post {
+  margin-bottom: 30px;
+}
+#timeline .title {
+  font-size: 1.5em;
+  font-family: 'Petit Formal Script', cursive;
+  margin: -0.2em;
+  color: rgba(5, 5, 5, 0.7);
+  margin-left: 50px;
+}
+#timeline .meta {
+  margin-left: 20px;
+  font-size: .75em;
+  color: rgba(147, 145, 148, 0.5);
+}
+#timeline .content_wrapper {
+  padding: 10px 0;
+  border-top: 1px solid rgba(147, 145, 148, 0.5);
+  border-bottom: 1px solid rgba(147, 145, 148, 0.5);
+}
+#timeline .content_wrapper .content {
+  text-indent: 50px;
+  padding: 10px 30px;
+  color: rgba(5, 5, 5, 0.5);
+}

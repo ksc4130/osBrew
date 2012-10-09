@@ -9,6 +9,8 @@ html
 		link(rel='stylesheet', href='/styles/jquery-ui-1.8.22.custom.css')
 		block head
 	body
+		div(id="loginbtn_wrapper")
+			p Login
 		header
 			div(id="logo_wrapper")
 				div(id="logo")
@@ -26,6 +28,17 @@ html
 		div(id="content_filler")
 			div(id="content_wrapper")
 				block content
+		div#login_wrapper
+			div#login
+				span#x
+					p x
+				form(method="post", action="/login")
+					div Email
+					input(name="email")
+					div Password
+					input(name="password")
+					br
+					input(type="submit", value="Login")
 	script(src="/scripts/libs/jquery-1.7.2.min.js")
 	script(src="/scripts/libs/jquery-ui-1.8.22.custom.min.js")
 	script(src="/scripts/libs/slides.min.jquery.js")
@@ -34,5 +47,11 @@ html
 	script
 		$(function() {
 			$('a##{active}').addClass('active');
+			$('#loginbtn_wrapper').click(function(e) {
+				$('#login_wrapper').show();
+			});
+			$('#x').click(function(e) {
+				$('#login_wrapper').hide();
+			});
 		});
 	block scripts

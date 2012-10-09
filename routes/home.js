@@ -14,3 +14,8 @@ exports.about = function(req, res){
 exports.contact = function(req, res){
   res.render('contact', { title: 'osBrew-Contact', active: 'contact' });
 };
+
+exports.login = function(req, res){
+	console.log(req.body.email);
+  	res.render('index', { title: 'osBrew-Home', active: 'index' });
+};
