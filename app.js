@@ -39,6 +39,7 @@ app.configure('development', function(){
 
 app.get('/', routes.home.index);
 app.get('/gallery', routes.home.gallery);
+app.get('/about', routes.home.about);
 app.get('/contact', routes.home.contact);
 
 app.post('/login',routes.home.login);
