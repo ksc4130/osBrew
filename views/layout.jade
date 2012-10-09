@@ -7,40 +7,41 @@ html
 		link(href="http://fonts.googleapis.com/css?family=Allura", rel="stylesheet", type="text/css")
 		link(rel='stylesheet', href='/styles/style.css')
 		link(rel='stylesheet', href='/styles/jquery-ui-1.8.22.custom.css')
+		link(rel='stylesheet', href='/styles/slides.css')
 		block head
 	body
 		div(id="loginbtn_wrapper")
 			p Login
 		header
 			div(id="logo_wrapper")
+				div(id="slides_container", style="margin-top: 150px;")
+					div(id="slides_wrapper")
+						div(id="slides")
+							div(class="slides_container", data-bind="foreach: curImgs")
+								a(href="#", title="", target="_blank", data-bind="attr: { 'href': src }")
+									img(width="570", height="270", data-bind="attr: { 'src': src, 'alt': alt }")
+							a(href="#", class="prev")
+								img(src="/images/arrow-prev.png", width="24", height="43", alt="Arrow Prev")
+							a(href="#", class="next")
+								img(src="/images/arrow-next.png", width="24", height="43", alt="Arrow Next")
+						img(src="/images/frame.png", width="739", height="341", alt="Frame", id="frame")
 				div(id="logo")
 					div(id="owens") Owens
 					div(id="station") Station
 					div(id="brewery") Brewery
-			nav
-				ul
-					li
-						a(href="/", id="home") Home
-					li
-						a(href="/gallery", id="gallery") Gallery
-					li
-						a(href="/about", id="about") About
-					li
-						a(href="/contact", id="contact") Contact Us
+				nav
+					ul
+						li
+							a(href="/", id="home") Home
+						li
+							a(href="/gallery", id="gallery") Gallery
+						li
+							a(href="/about", id="about") About
+						li
+							a(href="/contact", id="contact") Contact Us
 		div(id="content_filler")
 			div(id="content_wrapper")
 				block content
-		div#login_wrapper
-			div#login
-				span#x
-					p x
-				form(method="post", action="/login")
-					div Email
-					input(name="email")
-					div Password
-					input(name="password")
-					br
-					input(type="submit", value="Login")
 	script(src="/scripts/libs/jquery-1.7.2.min.js")
 	script(src="/scripts/libs/jquery-ui-1.8.22.custom.min.js")
 	script(src="/scripts/libs/slides.min.jquery.js")
@@ -57,3 +58,37 @@ html
 			});
 		});
 	block scripts
+	script
+		var _imgs = [
+			[
+				{ src: '/images/sunset.jpg', alt: 'Sunset' },
+				{ src: '/images/road.jpg', alt: 'Road' },
+				{ src: '/images/boatC.jpg', alt: 'Boat' }
+			],
+			[
+				{ src: '/images/sunset.jpg', alt: 'Sunset' },
+				{ src: '/images/road.jpg', alt: 'Road' },
+				{ src: '/images/boatC.jpg', alt: 'Boat' }
+			]
+		];
+
+		var _curImgs = ko.observableArray(_imgs[0]);
+
+		var vm = function() {
+			return {
+				imgs: _imgs,
+				curImgs: _curImgs
+			}
+		}();
+
+		ko.applyBindings(vm, $('#logo_wrapper')[0]);
+
+		$(function(){
+			$('#slides').slides({
+				preload: true,
+				preloadImage: '/images/loading.gif',
+				play: 5000,
+				pause: 2500,
+				hoverPause: true
+			});
+		});

@@ -152,16 +152,8 @@ tt {
   margin-right: auto;
   min-width: 1000px;
 }
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  font-family: 'Petit Formal Script', cursive;
-  margin: -0.2em;
-  color: rgba(5, 5, 5, 0.7);
-}
+/************/
+/************/
 .h1 {
   font-size: 4.75em;
 }
@@ -183,19 +175,14 @@ tt {
 .hidden {
   display: none;
 }
-.font {
-  font-family: cursive;
-  font-size: 1.5em;
-  line-height: 1.6;
-  color: rgba(5, 5, 5, 0.7);
-}
 html {
-  background-color: #333;
+  background-color: #333333;
   background-image: url('/images/tex2res4.png');
   background-repeat: repeat;
   height: 100%;
 }
 html body {
+  overflow: hidden;
   min-width: 1100px;
   height: 100%;
 }
@@ -205,6 +192,10 @@ html body #loginbtn_wrapper {
   -webkit-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
   position: absolute;
   top: 8px;
   right: -88px;
@@ -251,6 +242,7 @@ html body header nav ul li a {
   -webkit-text-shadow: 0 0 14px #000000;
   -o-text-shadow: 0 0 14px #000000;
   -ms-text-shadow: 0 0 14px #000000;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
   text-decoration: none;
   display: block;
   padding: 5px 15px;
@@ -267,7 +259,7 @@ html body header nav ul li a.active {
   color: rgba(255, 255, 255, 0.9);
 }
 html body div#content_filler {
-  background-color: #ddd;
+  background-color: #dddddd;
   background-image: url('/images/fabric_plaid.png');
   background-repeat: repeat;
   min-width: 100%;
@@ -384,6 +376,7 @@ div#logo_wrapper div#logo div {
   -webkit-text-shadow: 0 0 14px #000000;
   -o-text-shadow: 0 0 14px #000000;
   -ms-text-shadow: 0 0 14px #000000;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
   position: absolute;
   width: auto;
   height: auto;
@@ -417,6 +410,10 @@ div#logo_wrapper div#logo div#a {
   -webkit-transform: rotate(35deg);
   -o-transform: rotate(35deg);
   -ms-transform: rotate(35deg);
+  -webkit-transform: rotate(35deg);
+  -moz-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  -o-transform: rotate(35deg);
   width: 50px;
   height: 2px;
   background-color: rgba(255, 255, 255, 0.5);
@@ -436,6 +433,355 @@ div#logo_wrapper div#logo div#c {
   -webkit-transform: rotate(-5deg);
   -o-transform: rotate(-5deg);
   -ms-transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  width: 50px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: 'Petit Formal Script', cursive;
+  margin: -0.2em;
+  color: rgba(5, 5, 5, 0.7);
+}
+.font {
+  font-family: cursive;
+  font-size: 1.5em;
+  line-height: 1.6;
+  color: rgba(5, 5, 5, 0.7);
+}
+html {
+  background-color: #333333;
+  background-image: url('/images/tex2res4.png');
+  background-repeat: repeat;
+  height: 100%;
+}
+html body {
+  overflow: hidden;
+  min-width: 1100px;
+  height: 100%;
+}
+html body #loginbtn_wrapper {
+  transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  position: absolute;
+  top: 8px;
+  right: -88px;
+  width: 250px;
+  height: 60px;
+  border: 2px solid black;
+  background-color: rgba(241, 108, 50, 0.8);
+  cursor: pointer;
+}
+html body #loginbtn_wrapper:hover {
+  background-color: rgba(251, 118, 60, 0.9);
+}
+html body #loginbtn_wrapper p {
+  font-family: cursive;
+  font-size: 1.5em;
+  line-height: 1.6;
+  color: rgba(5, 5, 5, 0.7);
+  position: relative;
+  top: 10px;
+  font-size: 2em;
+  text-align: center;
+}
+html body header {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 1000px;
+  position: relative;
+}
+html body header nav {
+  display: none;
+  margin-top: 15px;
+  z-index: 1;
+}
+html body header nav ul li {
+  display: inline-block;
+}
+html body header nav ul li:first-child {
+  margin-left: 50px;
+}
+html body header nav ul li a {
+  text-shadow: 0 0 14px #000000;
+  /* horizontal-offset vertical-offset 'blur' colour */
+
+  -moz-text-shadow: 0 0 14px #000000;
+  -webkit-text-shadow: 0 0 14px #000000;
+  -o-text-shadow: 0 0 14px #000000;
+  -ms-text-shadow: 0 0 14px #000000;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  display: block;
+  padding: 5px 15px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+  font-family: 'Petit Formal Script', cursive;
+}
+html body header nav ul li a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+html body header nav ul li a.active {
+  color: rgba(255, 255, 255, 0.9);
+}
+html body div#content_filler {
+  display: none;
+  background-color: #dddddd;
+  background-image: url('/images/fabric_plaid.png');
+  background-repeat: repeat;
+  min-width: 100%;
+  min-height: 100%;
+  border-top: 2px solid rgba(241, 108, 50, 0.5);
+  margin-top: 20px;
+}
+html body div#content_filler div#content_wrapper {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 1000px;
+  font-family: cursive;
+  font-size: 1.5em;
+  line-height: 1.6;
+  color: rgba(5, 5, 5, 0.7);
+  margin-bottom: 40px;
+  padding: 30px;
+  min-height: 100%;
+}
+html body div#content_filler div#content_wrapper a {
+  text-decoration: none;
+  color: #f16c32;
+}
+html body div#content_filler div#content_wrapper a:hover {
+  text-decoration: underline;
+}
+html body div#login_wrapper {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(5, 5, 5, 0.6);
+  z-index: 300;
+}
+html body div#login_wrapper div#login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -25%;
+  margin-left: -20%;
+  padding: 25px 50px;
+  z-index: 500;
+  border: 5px solid #000;
+  border-radius: 20px;
+  background-color: rgba(227, 211, 155, 0.9);
+}
+html body div#login_wrapper div#login #x {
+  z-index: 600;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  background-color: rgba(241, 108, 50, 0.7);
+  border: 1px solid #999;
+  cursor: pointer;
+}
+html body div#login_wrapper div#login #x:hover {
+  background-color: rgba(255, 122, 64, 0.9);
+}
+html body div#login_wrapper div#login #x p {
+  margin-top: -5px;
+  margin-left: -3px;
+  font-family: cursive;
+  font-size: 1.5em;
+  line-height: 1.6;
+  color: rgba(5, 5, 5, 0.7);
+  font-size: 2.5em;
+  text-align: center;
+}
+html body div#login_wrapper div#login form {
+  display: inline-block;
+  display: block;
+  font-family: cursive;
+  font-size: 1.5em;
+  line-height: 1.6;
+  color: rgba(5, 5, 5, 0.7);
+}
+html body div#login_wrapper div#login form input[type="submit"] {
+  margin-top: 20px;
+  margin-bottom: -10px;
+  cursor: pointer;
+  min-width: 105px;
+  float: right;
+}
+html body input {
+  border-radius: 20px;
+  padding: 10px;
+  font-family: cursive;
+  font-size: 1.5em;
+  line-height: 1.6;
+  color: rgba(5, 5, 5, 0.7);
+  font-size: 1em;
+  outline: none;
+}
+div#logo_wrapper {
+  background-color: #000000;
+  background-image: url('/images/bo_play_pattern.png');
+  background-repeat: repeat;
+  -webkit-box-shadow: 0 0 25px 5px #ffffff;
+  -moz-box-shadow: 0 0 25px 5px #ffffff;
+  box-shadow: 0 0 25px 5px #ffffff;
+  position: absolute;
+  top: -20px;
+  left: 75px;
+  right: 75px;
+  height: 700px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+div#logo_wrapper nav {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  right: 0px;
+  height: 40px;
+}
+div#logo_wrapper nav ul li {
+  position: relative;
+  margin-left: 50px;
+  width: 150px;
+  display: inline-block;
+}
+div#logo_wrapper nav ul li a {
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  -webkit-box-shadow: 0 0 5px 2px #ffffff;
+  -moz-box-shadow: 0 0 5px 2px #ffffff;
+  box-shadow: 0 0 5px 2px #ffffff;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  background-color: #000;
+  text-shadow: 0 0 14px #000000;
+  /* horizontal-offset vertical-offset 'blur' colour */
+
+  -moz-text-shadow: 0 0 14px #000000;
+  -webkit-text-shadow: 0 0 14px #000000;
+  -o-text-shadow: 0 0 14px #000000;
+  -ms-text-shadow: 0 0 14px #000000;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  display: block;
+  padding: 5px 15px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+  font-family: arial;
+}
+div#logo_wrapper nav ul li a:hover {
+  color: rgba(255, 255, 255, 0.8);
+  padding-top: 20px;
+}
+div#logo_wrapper nav ul li a.active {
+  color: rgba(255, 255, 255, 0.9);
+}
+div#logo_wrapper div#logo {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+}
+div#logo_wrapper div#logo div {
+  text-shadow: 0 0 14px #000000;
+  /* horizontal-offset vertical-offset 'blur' colour */
+
+  -moz-text-shadow: 0 0 14px #000000;
+  -webkit-text-shadow: 0 0 14px #000000;
+  -o-text-shadow: 0 0 14px #000000;
+  -ms-text-shadow: 0 0 14px #000000;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  width: auto;
+  height: auto;
+  color: rgba(254, 245, 202, 0.7);
+  font-family: 'Allura', cursive;
+}
+div#logo_wrapper div#logo div#owens {
+  font-size: 180px;
+  top: 7px;
+  left: 5px;
+  z-index: -2;
+}
+div#logo_wrapper div#logo div#station {
+  top: 140px;
+  left: 400px;
+  color: #fff;
+  font-size: 30px;
+  z-index: -1;
+}
+div#logo_wrapper div#logo div#brewery {
+  font-size: 30px;
+  top: 160px;
+  left: 335px;
+  z-index: -2;
+}
+div#logo_wrapper div#logo div#a {
+  top: 180px;
+  left: 290px;
+  transform: rotate(35deg);
+  -moz-transform: rotate(35deg);
+  -webkit-transform: rotate(35deg);
+  -o-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  -webkit-transform: rotate(35deg);
+  -moz-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  -o-transform: rotate(35deg);
+  width: 50px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+div#logo_wrapper div#logo div#b {
+  top: 200px;
+  left: 320px;
+  width: 73px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+div#logo_wrapper div#logo div#c {
+  top: 93px;
+  left: 150px;
+  transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
   width: 50px;
   height: 2px;
   background-color: rgba(255, 255, 255, 0.5);
