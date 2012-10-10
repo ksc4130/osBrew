@@ -16,10 +16,21 @@ var collections = ['recipes'];
 var db = mongo.connect('osBrew', collections);
 var ObjectId = mongo.ObjectId;
 
+//less
+var less = require('less');
+var parser = new(less.Parser)({
+    paths: ['./public/styles/boxes'], // Specify search paths for @import directives
+    filename: 'style.less' // Specify a filename, for better error messages
+});
+
+parser.parse('.class { width: 1 + 1 }', function (e, tree) {
+    console.log(tree.toCSS({ compress: true })); // Minify CSS output
+});
+
 var app = express();
 
 app.configure(function(){
-  app.set('port', process.env.PORT || 80);
+  app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.favicon());
@@ -29,8 +40,12 @@ app.configure(function(){
   app.use(express.cookieParser('osBrew is Beast!'));
   app.use(express.session());
   app.use(app.router);
-  app.use(require('less-middleware')({ src: __dirname + '/public' }));
-  app.use(express.static(path.join(__dirname, 'public')));
+  // app.use(lessMiddleware({
+  //       dest: __dirname + '/public/styles',
+  //       src: __dirname + '/public/styles',
+  //       compress: true
+  //   }));
+  app.use(express.static(__dirname + '/public'));
 });
 
 app.configure('development', function(){
@@ -38,6 +53,7 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.home.index);
+app.get('/O', routes.home.indexO);
 app.get('/gallery', routes.home.gallery);
 app.get('/about', routes.home.about);
 app.get('/contact', routes.home.contact);

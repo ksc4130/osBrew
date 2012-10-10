@@ -5,26 +5,35 @@ html
 		title= title
 		link(href="http://fonts.googleapis.com/css?family=Petit+Formal+Script", rel="stylesheet", type="text/css")
 		link(href="http://fonts.googleapis.com/css?family=Allura", rel="stylesheet", type="text/css")
-		link(rel='stylesheet', href='/styles/boxes/style.css')
+		link(rel='stylesheet', href='/styles/new/style.css')
 		link(rel='stylesheet', href='/styles/jquery-ui-1.8.22.custom.css')
 		block head
 	body
+		#tHead_wrapper
+			#tHead
+				nav
+					ul
+						li
+							a(href="/", id="home") Home
+						li
+							a(href="/gallery", id="gallery") Gallery
+						li
+							a(href="/about", id="about") About
+						li
+							a(href="/contact", id="contact") Contact Us
+		#tHead2
+		img(src="/images/bg_highlight-big.png", id="bigHi")
+		#ball
+		//img(src="/images/cloud.png", id="cloud")
 		header
-			#logo_wrapper
-				#o O
-				#s S
-			nav
-				ul
-					li
-						a(href="/", id="home") Home
-					li
-						a(href="/gallery", id="gallery") Gallery
-					li
-						a(href="/about", id="about") About
-					li
-						a(href="/contact", id="contact") Contact Us
-			#mainBox
-				img(src="/images/home1200Crp.jpg")
+			//img(id="bottle", src="/images/bottleCrp.jpg")
+			div(id="logo_wrapper")
+				div(id="logo")
+					div(id="owens") Owens
+					div(id="owens2") Owens
+					div(id="station") Station
+					div(id="brewery") Brewery
+					div(id="brewery2") Brewery
 		div(id="content_wrapper")
 			block content
 	script(src="/scripts/libs/jquery-1.7.2.min.js")
