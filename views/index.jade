@@ -3,11 +3,6 @@ extends layout
 block head
 	link(href="/styles/index.css", rel="stylesheet")
 block content
-	#timeline(data-bind="foreach: posts")
-		div.post
-			span.title(data-bind="text: title")
-			span.meta(data-bind="text: date")
-			div.content_wrapper
-				p.content(data-bind="text: content")
+	h1 Hello
 block scripts
 	script(src="/scripts/viewmodels/index.js")

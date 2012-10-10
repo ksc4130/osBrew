@@ -1,0 +1,357 @@
+/************/
+/************/
+/*css reset*/
+html {
+  color: #000;
+  background: #ffffff;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+ol,
+ul {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+q:before,
+q:after {
+  content: '';
+}
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+input,
+textarea,
+select {
+  *font-size: 100%;
+}
+legend {
+  color: #000000;
+}
+#yui3-css-stamp.cssreset {
+  display: none;
+}
+/*font reset*/
+body {
+  font: 13px/1.231 arial, helvetica, clean, sans-serif;
+  *font-size: small;
+  *font: x-small;
+}
+select,
+input,
+button,
+textarea {
+  font: 99% arial, helvetica, clean, sans-serif;
+}
+table {
+  font-size: inherit;
+  font: 100%;
+}
+pre,
+code,
+kbd,
+samp,
+tt {
+  font-family: monospace;
+  *font-size: 108%;
+  line-height: 100%;
+}
+#yui3-css-stamp.cssfonts {
+  display: none;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  display: inline-block;
+}
+* html .clearfix {
+  height: 1%;
+}
+.clearfix {
+  display: block;
+}
+.global_width {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 1000px;
+}
+html {
+  background-color: #fffcfc;
+}
+html body {
+  background-color: #fffcfc;
+}
+#tHead_wrapper {
+  width: 100%;
+  min-width: 1200px;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: -10px;
+  height: 250px;
+}
+#tHead_wrapper #tHead {
+  height: 200px;
+  background-color: #ace500;
+  min-width: 1000px;
+  position: absolute;
+  top: -80px;
+  min-width: 1200px;
+  left: -20px;
+  width: 2000px;
+  z-index: 1;
+  transform: rotate(-7deg);
+  -moz-transform: rotate(-7deg);
+  -webkit-transform: rotate(-7deg);
+  -o-transform: rotate(-7deg);
+  -ms-transform: rotate(-7deg);
+  -webkit-transform: rotate(-7deg);
+  -moz-transform: rotate(-7deg);
+  -ms-transform: rotate(-7deg);
+  -o-transform: rotate(-7deg);
+  border-bottom: 2px dashed #7c7c7c;
+  border-top: 2px dashed #7c7c7c;
+}
+#tHead_wrapper #tHead nav {
+  position: absolute;
+  bottom: -40px;
+  left: 700px;
+  z-index: 1;
+}
+#tHead_wrapper #tHead nav ul li {
+  display: inline-block;
+}
+#tHead_wrapper #tHead nav ul li:first-child {
+  margin-left: 50px;
+}
+#tHead_wrapper #tHead nav ul li a {
+  text-shadow: 0 0 14px #000000;
+  /* horizontal-offset vertical-offset 'blur' colour */
+
+  -moz-text-shadow: 0 0 14px #000000;
+  -webkit-text-shadow: 0 0 14px #000000;
+  -o-text-shadow: 0 0 14px #000000;
+  -ms-text-shadow: 0 0 14px #000000;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  display: block;
+  padding: 5px 15px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+  font-family: 'Petit Formal Script', cursive;
+}
+#tHead_wrapper #tHead nav ul li a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+#tHead_wrapper #tHead nav ul li a.active {
+  color: rgba(255, 255, 255, 0.9);
+}
+#tHead2 {
+  width: 100%;
+  min-width: 1200px;
+  height: 400px;
+  background-color: #0099cc;
+  position: absolute;
+  top: -200px;
+  left: 0px;
+  border-bottom: 2px dashed #7c7c7c;
+}
+#ball {
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+  background-color: pink;
+  border: 2px dashed #333;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  z-index: 2;
+  overflow: hidden;
+  background-image: url('/images/treesSunDriveSm.jpg');
+  -webkit-box-shadow: 0 0 25px 5px #333333;
+  -moz-box-shadow: 0 0 25px 5px #333333;
+  box-shadow: 0 0 25px 5px #333333;
+}
+#bigHi {
+  position: absolute;
+  top: -100px;
+  left: 0px;
+  z-index: 1;
+}
+#cloud {
+  height: 200px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 1;
+}
+#bottle {
+  bottom: 0px;
+  right: 0px;
+  position: absolute;
+  border-radius: 10px;
+}
+div#logo_wrapper {
+  height: 200px;
+  position: absolute;
+  top: -45px;
+  left: 230px;
+}
+div#logo_wrapper div#logo {
+  position: relative;
+  width: 200px;
+  height: 115px;
+  overflow: visible;
+}
+div#logo_wrapper div#logo div {
+  position: absolute;
+  width: auto;
+  height: auto;
+  color: #0099cc;
+  font-family: 'Allura', cursive;
+}
+div#logo_wrapper div#logo div#owens {
+  font-size: 150px;
+  top: 30px;
+  left: 60px;
+  z-index: 2;
+}
+div#logo_wrapper div#logo div#owens2 {
+  font-size: 150px;
+  top: 32px;
+  left: 62px;
+  z-index: 2;
+  color: #fff;
+}
+div#logo_wrapper div#logo div#station {
+  top: 140px;
+  left: 400px;
+  color: #fff;
+  font-size: 30px;
+  z-index: 3;
+}
+div#logo_wrapper div#logo div#brewery {
+  font-size: 30px;
+  top: 160px;
+  left: 335px;
+  z-index: 2;
+  color: #ffffff;
+}
+div#logo_wrapper div#logo div#brewery2 {
+  font-size: 30px;
+  top: 161px;
+  left: 336px;
+  z-index: 2;
+  color: #7c7c7c;
+}
+#body {
+  width: 200px;
+  height: 400px;
+  top: 300px;
+  left: 200px;
+  background: red;
+  position: absolute;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+#neck {
+  width: 100px;
+  height: 200px;
+  top: 150px;
+  left: 250px;
+  background: red;
+  position: absolute;
+  border-radius: 20px;
+}
+#top {
+  width: 100px;
+  height: 15px;
+  top: 100px;
+  left: 250px;
+  background: red;
+  position: absolute;
+  border-radius: 10px;
+}

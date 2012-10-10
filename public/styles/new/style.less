@@ -1,0 +1,405 @@
+.bgRepeater(@BGI: url('/images/tex2res4.png'), @BGC: #333) {
+	background-color: @BGC;
+	background-image: @BGI;
+	background-repeat: repeat;
+}
+
+.rotate(@deg: 10deg) {
+	transform:rotate(@deg);
+	-moz-transform:rotate(@deg);
+	-webkit-transform:rotate(@deg);
+	-o-transform:rotate(@deg);
+	-ms-transform:rotate(@deg);
+}
+
+.text-shadow(@color: #000, @size: 14px) {
+	text-shadow: 0 0 @size @color; /* horizontal-offset vertical-offset 'blur' colour */
+	-moz-text-shadow: 0 0 @size @color;
+	-webkit-text-shadow: 0 0 @size @color;
+	-o-text-shadow: 0 0 @size @color;
+	-ms-text-shadow: 0 0 @size @color;
+}
+
+
+/************/
+.text-shadow (@string: 0 1px 3px rgba(0, 0, 0, 0.25)) {
+	text-shadow: @string;
+}
+.box-shadow (@string) {
+	-webkit-box-shadow: @string;
+	-moz-box-shadow:    @string;
+	box-shadow:         @string;
+}
+.drop-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+	-webkit-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow:		@x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+.inner-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+	-webkit-box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow:    inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow:         inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
+.box-sizing (@type: border-box) {
+	-webkit-box-sizing: @type;
+	-moz-box-sizing:    @type;
+	box-sizing:         @type;
+}
+
+.border-radius (@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius:    @radius;
+	border-radius:         @radius;
+
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+}
+.border-radiuses (@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+	-webkit-border-top-right-radius:    @topright;
+	-webkit-border-bottom-right-radius: @bottomright;
+	-webkit-border-bottom-left-radius:  @bottomleft;
+	-webkit-border-top-left-radius:     @topleft;
+
+	-moz-border-radius-topright:        @topright;
+	-moz-border-radius-bottomright:     @bottomright;
+	-moz-border-radius-bottomleft:      @bottomleft;
+	-moz-border-radius-topleft:         @topleft;
+
+	border-top-right-radius:            @topright;
+	border-bottom-right-radius:         @bottomright;
+	border-bottom-left-radius:          @bottomleft;
+	border-top-left-radius:             @topleft;
+
+	-moz-background-clip:    padding; 
+	-webkit-background-clip: padding-box; 
+	background-clip:         padding-box; 
+}
+
+.opacity (@opacity: 0.5) {
+	-webkit-opacity: 	@opacity;
+	-moz-opacity: 		@opacity;
+	opacity: 		@opacity;
+}
+
+.gradient (@startColor: #eee, @endColor: white) {
+	background-color: @startColor;
+	background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+	background: -webkit-linear-gradient(top, @startColor, @endColor);
+	background: -moz-linear-gradient(top, @startColor, @endColor);
+	background: -ms-linear-gradient(top, @startColor, @endColor);
+	background: -o-linear-gradient(top, @startColor, @endColor);
+}
+.horizontal-gradient (@startColor: #eee, @endColor: white) {
+ 	background-color: @startColor;
+	background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+	background-image: -webkit-linear-gradient(left, @startColor, @endColor);
+	background-image: -moz-linear-gradient(left, @startColor, @endColor);
+	background-image: -ms-linear-gradient(left, @startColor, @endColor);
+	background-image: -o-linear-gradient(left, @startColor, @endColor);
+}
+
+.animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
+	-webkit-animation: @name @duration @delay @ease;
+	-moz-animation:    @name @duration @delay @ease;
+	-ms-animation:     @name @duration @delay @ease;
+}
+
+.transition (@transition) {
+	-webkit-transition: @transition;  
+	-moz-transition:    @transition;
+	-ms-transition:     @transition; 
+	-o-transition:      @transition;  
+}
+.transform(@string){
+	-webkit-transform: @string;
+	-moz-transform: 	 @string;
+	-ms-transform: 		 @string;
+	-o-transform: 		 @string;
+}
+.scale (@factor) {
+	-webkit-transform: scale(@factor);
+	-moz-transform: 	 scale(@factor);
+	-ms-transform: 		 scale(@factor);
+	-o-transform: 		 scale(@factor);
+}
+.rotate (@deg) {
+	-webkit-transform: rotate(@deg);
+	-moz-transform: 	 rotate(@deg);
+	-ms-transform: 		 rotate(@deg);
+	-o-transform: 		 rotate(@deg);
+}
+.skew (@deg, @deg2) {
+	-webkit-transform:       skew(@deg, @deg2);
+	-moz-transform: 	 skew(@deg, @deg2);
+	-ms-transform: 		 skew(@deg, @deg2);
+	-o-transform: 		 skew(@deg, @deg2);
+}
+.translate (@x, @y:0) {
+	-webkit-transform:       translate(@x, @y);
+	-moz-transform: 	 translate(@x, @y);
+	-ms-transform: 		 translate(@x, @y);
+	-o-transform: 		 translate(@x, @y);
+}
+.translate3d (@x, @y: 0, @z: 0) {
+	-webkit-transform:       translate3d(@x, @y, @z);
+	-moz-transform: 	 translate3d(@x, @y, @z);
+	-ms-transform: 		 translate3d(@x, @y, @z);
+	-o-transform: 		 translate3d(@x, @y, @z);
+}
+.perspective (@value: 1000) {
+	-webkit-perspective: 	@value;
+	-moz-perspective: 	@value;
+	-ms-perspective: 	@value;
+	perspective: 		@value;
+}
+.transform-origin (@x:center, @y:center) {
+	-webkit-transform-origin: @x @y;
+	-moz-transform-origin:    @x @y;
+	-ms-transform-origin:     @x @y;
+	-o-transform-origin:      @x @y;
+}
+/************/
+
+/*css reset*/
+html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}
+/*font reset*/
+body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small}select,input,button,textarea{font:99% arial,helvetica,clean,sans-serif}table{font-size:inherit;font:100%}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%}#yui3-css-stamp.cssfonts{display:none}
+
+//clearfix
+.clearfix:after {
+	visibility:hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.clearfix { display: inline-block; }
+
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+//end clearfix
+
+.global_width{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 1000px;
+}
+
+html {
+	background-color: #fffcfc;
+	//.bgRepeater(url('/images/bottleCrpBG.jpg'), #f1f1f1);  
+	body {
+		background-color: #fffcfc;
+		//.bgRepeater(url('/images/bottleCrpBG.jpg'), #f1f1f1); 
+	}
+}
+
+@FontColorBlur: rgba(255, 255, 255, .5);
+@FontColorHover: rgba(255, 255, 255, .8);
+@FontColorActive: rgba(255, 255, 255, .9);
+
+#tHead_wrapper {
+	width: 100%;
+	min-width: 1200px;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: -10px;
+	height: 250px;
+	#tHead {
+		height: 200px;
+		background-color: #ace500;
+		min-width: 1000px;
+		position: absolute;
+		top: -80px;
+		min-width: 1200px;
+		left: -20px;
+		width: 2000px;
+		z-index: 1;
+		.rotate(-7deg);
+		border-bottom: 2px dashed #7c7c7c;
+		border-top: 2px dashed #7c7c7c;
+		nav {		position: absolute;
+			bottom: -40px;
+			left: 700px;
+			z-index: 1;
+			ul {
+				li {
+					&:first-child {
+						margin-left: 50px;
+					}
+					display: inline-block;
+					a {
+						.text-shadow;
+						text-decoration: none;
+						display: block;
+						padding: 5px 15px;
+						color: @FontColorBlur;
+						font-size: 20px;
+						-webkit-transition: color .2s;
+						transition: color .2s;
+						font-family: 'Petit Formal Script', cursive;
+						&:hover {
+							color: @FontColorHover;
+						}
+					}
+					a.active {
+						color: @FontColorActive;
+					}
+				}
+			}
+		}
+	}
+}
+
+#tHead2 {
+	width: 100%;
+	min-width: 1200px;
+	height: 400px;
+	background-color: #0099cc;
+	position: absolute;
+	top: -200px;
+	left: 0px;
+	//z-index: -1;
+	border-bottom: 2px dashed #7c7c7c;
+}
+
+#ball {
+	width: 300px;
+	height: 300px;
+	border-radius: 150px;
+	background-color: pink;
+	border: 2px dashed #333;
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	z-index: 2;
+	overflow: hidden;
+	background-image: url('/images/treesSunDriveSm.jpg');
+	.box-shadow(0 0 25px 5px #333);
+}
+
+#bigHi {
+	position: absolute;
+	top: -100px;
+	left: 0px;
+	z-index: 1;
+}
+
+#cloud {
+	height: 200px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	z-index: 1;
+}
+
+#bottle {
+	bottom: 0px;
+	right: 0px;
+	position: absolute;
+	border-radius: 10px;
+	//.rotate(90deg);
+}
+
+div#logo_wrapper {
+	height: 200px;
+	position: absolute;
+		top: -45px;
+		left: 230px;
+	div#logo {
+		position: relative;
+		width: 200px;
+		height: 115px;
+		//background-color: #f16c32;
+	overflow: visible;
+		div {
+			//.text-shadow;
+			position: absolute;
+			width: auto;
+			height: auto;
+			color: #0099cc;//#7c7c7c;//rgba(254, 245, 202, .7);
+			//color: rgba(75, 48, 36, .9);
+			//font-family: 'Petit Formal Script', cursive;
+			font-family: 'Allura', cursive;
+		}
+		div#owens {
+			font-size: 150px;//180px;
+			top: 30px;//7px;
+			left: 60px;//5px;
+			z-index: 2;
+			//color: #0099cc;
+		}
+		div#owens2 {
+			font-size: 150px;//180px;
+			top: 32px;//9px;
+			left: 62px;//7px;
+			z-index: 2;
+			//color: #0099cc;
+			color: #fff;
+		}
+		div#station {
+			top: 140px;
+			left: 400px;
+			color: #fff;
+			font-size: 30px;
+			z-index: 3;
+		}
+		div#brewery {
+			font-size: 30px;
+			top: 160px;
+			left: 335px;
+			z-index: 2;
+			color: #fff
+		}
+		div#brewery2 {
+			font-size: 30px;
+			top: 161px;
+			left: 336px;
+			z-index: 2;
+			color: #7c7c7c;
+		}
+	}
+}
+
+#body {
+	width: 200px;
+	height: 400px;
+	top: 300px;
+	left: 200px;
+	background: red;
+	position: absolute;
+	border-top-left-radius: 100px;
+	border-top-right-radius: 100px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	//.rotate(90deg);
+}
+
+#neck {
+	width: 100px;
+	height: 200px;
+	top: 150px;
+	left: 250px;
+	background: red;
+	position: absolute;
+	border-radius: 20px;
+	//.rotate(90deg);
+}
+
+#top {
+	width: 100px;
+	height: 15px;
+	top: 100px;
+	left: 250px;
+	background: red;
+	position: absolute;
+	border-radius: 10px;
+	//.rotate(90deg);
+}
+
