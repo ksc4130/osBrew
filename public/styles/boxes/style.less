@@ -1,5 +1,6 @@
 @import "../base.less";
 
+
 html {
 	body {
 		header {
@@ -13,10 +14,10 @@ html {
 				width: 95px;
 				height: 60px;
 				//border: 1px solid pink;
-				#o, #s {
+				#o, #s, #b {
 					position: absolute;
 					font-family: 'Allura', cursive;
-					font-size: 7em;
+					font-size: 6em;
 				}
 				#o {
 					top: 0;
@@ -24,46 +25,122 @@ html {
 				}//#o
 				#s {
 					top: 0;
-					left: 50px;
+					left: 2.5em;
 				}//#s
+				#b {
+					top: 1.4em;
+					left: 9em;
+					font-size: 3em;
+				}//#b
 			}//logo_wrapper
 			nav {
 				height: 60px;
-				width: 700px;
-				float: right;
-				border: 1px solid green;
+				//border: 1px solid green;
 				ul {
 					li {
-						&:first-child {
-							//margin-left: 50px;
+						border-left: .15em solid #7c7c7c;
+						margin-left: 1.5;
+						&:last-child {
+							margin-left: 0;
+							border-left: 0;
 						}//first-child
-						display: inline-block;
+						margin-top: 1px;
+						float: right;
 						a {
 							.text-shadow;
 							text-decoration: none;
 							display: block;
 							padding: 5px 15px;
-							color: #b2b2b2;
-							font-size: 20px;
+							color: #7a7a7a;
+							font-size: 1.8em;
 							-webkit-transition: color .2s;
 							transition: color .2s;
-							font-family: 'Petit Formal Script', cursive;
+							font-family: arial, 'san seriff';//Times, serif;//'Petit Formal Script', cursive;
 							&:hover {
-								color: #828283;
+								color: #424243;
 							}//hover
 						}//a
 						a.active {
-							color: @FontColorActive;
+							color: #252525;
 						}//a.active
 					}//li
 				}//ul
 			}//nav
+			#slogan {
+				padding-top: 1em;
+				padding-bottom: .85em;
+				margin-right: 30px;
+				//border: 1px solid blue;
+				float: right;
+				text-align: right;
+				font-size: 1.5em;
+				color: #f46624;
+				font-family: 'Petit Formal Script', cursive;
+			}
 			#mainBox {
+				margin-bottom: 20px;
 				img {
 					width: 1000px;
+					border: 1px solid #ccc;
 					.box-shadow(0 0 25px 5px #333);//box shadow all sides
 				}//img
+				padding-bottom: 30px;
+				border-bottom: 1px dashed #7c7c7c;
 			}//#mainBox
+			#smallBoxOne {
+				img {
+					height: 400px;
+				}
+			}
 		}//header
+		#content_wrapper {
+			.global_width;
+			position: relative;
+			margin-bottom: 5em;
+			padding-bottom: 1em;
+			border-bottom: 1px dashed #7c7c7c;
+			.head {
+				margin-top: -1em;
+				padding-bottom: .85em;
+				font-size: 1.5em;
+				color: #f46624;
+				font-family: 'Petit Formal Script', cursive;	
+			}
+			p.content {
+				text-indent: 50px;
+				padding: 10px 30px;
+				color: rgba(5, 5, 5, .5);
+				line-height: 1.75em;
+			}
+			p.meta {
+				font-size: .75em;
+				color: rgba(147, 145, 148, .5);
+			}
+			#col_wrapper {
+				.clearfix;
+				#one, #two, #three {
+					display: inline-block;
+					width: 300px;
+					//position: absolute;
+					//top:0;
+					border-right: 1px dashed #7c7c7c;
+					border-left: 1px dashed #7c7c7c;
+					padding: 16px;
+					min-height: 200px;
+				}
+				#one {
+					//left: 0;
+				}
+				#two {
+					//left: 340px;
+					border-right: 0;
+					border-left: 0;
+				}
+				#three {
+					//right: 0;
+				}
+
+			}
+		}//#content_wrapper
 	}//body
 }//html

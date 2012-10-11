@@ -3,7 +3,8 @@ var express = require('express')
   , http = require('http')
   , path = require('path')
   , sys = require('sys')
-  , io = require('socket.io');
+  , io = require('socket.io')
+  , fs = require('fs');
 
 //routes
 var routes = { 
@@ -15,17 +16,6 @@ var mongo = require('mongojs');
 var collections = ['recipes'];
 var db = mongo.connect('osBrew', collections);
 var ObjectId = mongo.ObjectId;
-
-//less
-var less = require('less');
-var parser = new(less.Parser)({
-    paths: ['./public/styles/boxes'], // Specify search paths for @import directives
-    filename: 'style.less' // Specify a filename, for better error messages
-});
-
-parser.parse('.class { width: 1 + 1 }', function (e, tree) {
-    console.log(tree.toCSS({ compress: true })); // Minify CSS output
-});
 
 var app = express();
 

@@ -1,8 +1,21 @@
 extends layout
 
 block head
-	link(href="/styles/index.css", rel="stylesheet")
+	//link(href="/styles/index.css", rel="stylesheet")
 block content
-	h1 Hello
+	#col_wrapper
+		ul
+			li(id="one")
+				.head What we do
+				p.content
+					| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eros mi, tristique vitae molestie id, suscipit sit amet arcu. Morbi quis metus ut nisi aliquam mattis. Phasellus vel fermentum neque. Praesent hendrerit suscipit magna consequat gravida. Sed eu diam ac est tempor rhoncus sit amet quis nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec condimentum ultrices nibh, vel faucibus ante viverra eget. Nulla ut magna ante. Aliquam mattis feugiat dignissim.
+			li(id="two")
+				.head Gallery
+				p.content
+					| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eros mi, tristique vitae molestie id, suscipit sit amet arcu. Morbi quis metus ut nisi aliquam mattis. Phasellus vel fermentum neque. Praesent hendrerit suscipit magna consequat gravida. Sed eu diam ac est tempor rhoncus sit amet quis nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec condimentum ultrices nibh, vel faucibus ante viverra eget. Nulla ut magna ante. Aliquam mattis feugiat dignissim.
+			li(id="three")
+				.head Contact Us
+				p.content
+					| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eros mi, tristique vitae molestie id, suscipit sit amet arcu. Morbi quis metus ut nisi aliquam mattis. Phasellus vel fermentum neque. Praesent hendrerit suscipit magna consequat gravida. Sed eu diam ac est tempor rhoncus sit amet quis nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec condimentum ultrices nibh, vel faucibus ante viverra eget. Nulla ut magna ante. Aliquam mattis feugiat dignissim.
 block scripts
 	script(src="/scripts/viewmodels/index.js")
