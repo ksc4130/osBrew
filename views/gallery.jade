@@ -1,18 +1,9 @@
-extends layout
+extends headContentPage
 
 block head
-	link(rel='stylesheet', href='/styles/slides.css')
+    link(rel='stylesheet', href='/styles/slides.css')
 block content
-	div(id="slides_container")
-		div(id="slides_wrapper")
-			div(id="slides")
-				div(class="slides_container", data-bind="foreach: curImgs")
-					a(href="#", title="", target="_blank", data-bind="attr: { 'href': src }")
-						img(width="570", height="270", data-bind="attr: { 'src': src, 'alt': alt }")
-				a(href="#", class="prev")
-					img(src="/images/arrow-prev.png", width="24", height="43", alt="Arrow Prev")
-				a(href="#", class="next")
-					img(src="/images/arrow-next.png", width="24", height="43", alt="Arrow Next")
-			img(src="/images/frame.png", width="739", height="341", alt="Frame", id="frame")
+    div(id="slides_container", data-bind="slideShow: curImgs")
+        
 block scripts
-	script(src="/scripts/viewmodels/gallery.js")
+    script(src="/scripts/viewmodels/gallery.js")
